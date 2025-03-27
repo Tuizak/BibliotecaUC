@@ -1,9 +1,9 @@
 import React from "react";
-import "../Paginas/Desings/Login.css";
+import "../Paginas/Desings/LoginAdmin.css";
 import fondo from "../Assets/FondoLogin.png";
 import logo from "../Assets/bibliotecalogo.png"; 
 
-export const LoginAlum = () => {  
+export const LoginAdmin = () => {  
   return (
     <div 
       className="login-page-wrapper" 
@@ -23,7 +23,7 @@ export const LoginAlum = () => {
           <div className="login-form">
             <input 
               type="text" 
-              placeholder="Matrícula" 
+              placeholder="ID Bibliotecario" 
               className="login-input" 
             />
             <input 

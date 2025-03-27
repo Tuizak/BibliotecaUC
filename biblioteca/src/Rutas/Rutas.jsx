@@ -6,6 +6,7 @@ import { Historial } from '../Paginas/Historial';
 import { DevolverLibro } from '../Paginas/DevolverLibro';
 import { Navbar } from '../NavBar/Navbar';
 import { LoginAlum } from '../Paginas/LoginAlum';  
+import { LoginAdmin } from '../Paginas/LoginAdmin';
 
 export const Rutas = () => {
   return (
@@ -18,6 +19,8 @@ export const Rutas = () => {
           <Route path='/Historial' element={<Historial />} />
         </Route>
                   <Route path='/LoginAlum' element={<LoginAlum />} />
+                  <Route path='/LoginAdmin' element={<LoginAdmin />} />
+
 
       </Routes>
     </div>

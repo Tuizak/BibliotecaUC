@@ -19,7 +19,10 @@ export const Navbar = () => {
                     <Link to="/Historial">Historial</Link>
                 </li>
 
-                <li><Link to="/LoginAlum">Login</Link></li> 
+                <li><Link to="/LoginAlum">Login Alumno</Link></li> 
+
+                <li><Link to="/LoginAdmin">Login Bibliotecario</Link></li> 
+
 
             </ul>
         </nav>
