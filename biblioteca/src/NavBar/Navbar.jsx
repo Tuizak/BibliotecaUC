@@ -18,6 +18,9 @@ export const Navbar = () => {
                 <li>
                     <Link to="/Historial">Historial</Link>
                 </li>
+
+                <li><Link to="/LoginAlum">Login</Link></li> 
+
             </ul>
         </nav>
         <Outlet/>
