@@ -1,32 +1,39 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './Nav.css';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from "../Assets/bibliotecalogo.png"; 
 
 export const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); // Para obtener la ruta actual
+
   return (
-    <div>
+    <header className={`navbar ${menuOpen ? 'open' : ''}`}>
+      <div className="container">
+        <Link to="/" className="logo">
+          <img src={logo} alt="Logo Biblioteca" />
+        </Link>
+        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
         <nav>
-            <ul>
-                <li>
-                    <Link to="/">Inicio</Link>
-                </li>
-                <li>
-                    <Link to="/SolicitarPrestamo">Solicitar prestamo</Link>
-                </li>
-                <li>
-                    <Link to="/DevolverLibro">Devolver libro</Link>
-                </li>
-                <li>
-                    <Link to="/Historial">Historial</Link>
-                </li>
-
-                <li><Link to="/LoginAlum">Login Alumno</Link></li> 
-
-                <li><Link to="/LoginAdmin">Login Bibliotecario</Link></li> 
-
-
-            </ul>
+          <ul className={`nav-links ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(false)}>
+            {[
+              { path: "/", label: "Inicio" },
+              { path: "/SolicitarPrestamo", label: "Solicitar préstamo" },
+              { path: "/DevolverLibro", label: "Devolver libro" },
+              { path: "/Historial", label: "Historial" },
+              { path: "/LoginAlum", label: "Login Alumno" },
+              { path: "/LoginAdmin", label: "Login Bibliotecario" },
+            ].map((item) => (
+              <li key={item.path} className={location.pathname === item.path ? "active" : ""}>
+                <Link to={item.path}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
         </nav>
-        <Outlet/>
-    </div>
-  )
-}
+      </div>
+    </header>
+  );
+};
