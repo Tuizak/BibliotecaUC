@@ -13,7 +13,7 @@ const books = [
     id: 1, 
     title: 'El Quijote', 
     isbn: '9783161484100', 
-    description: 'Un clásico de la literatura española, escrito por Miguel de Cervantes.', 
+    description: 'Un clásico de la literatura española, escrito por Miguel de Cervantes', 
     image: 'https://via.placeholder.com/300x400?text=El+Quijote',
     available: 5 
   },
