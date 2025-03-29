@@ -8,6 +8,8 @@
   left: 0;
   z-index: 1000;
   transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .navbar.open {
@@ -79,6 +81,25 @@
 /* Hover en enlaces */
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo para el ícono de cerrar sesión */
+.logout-icon {
+  color: #ffffff; /* Color blanco */
+  font-size: 20px; /* Tamaño del ícono */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el ícono */
+  transition: color 0.3s ease;
+}
+
+.logout-icon:hover {
+  color: rgba(255, 255, 255, 0.7); /* Cambiar a un blanco más tenue al pasar el mouse */
+}
+
+/* Estilo para enlaces deshabilitados */
+.nav-links .disabled {
+  pointer-events: none; /* Deshabilitar clics */
+  opacity: 0.5; /* Reducir opacidad */
+  cursor: not-allowed; /* Cambiar el cursor */
 }
 
 /* Responsive */

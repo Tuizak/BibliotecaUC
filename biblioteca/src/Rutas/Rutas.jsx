@@ -7,6 +7,12 @@ import { DevolverLibro } from '../Paginas/DevolverLibro';
 import { Navbar } from '../NavBar/Navbar';
 import { LoginAlum } from '../Paginas/LoginAlum';  
 import { LoginAdmin } from '../Paginas/LoginAdmin';
+// páginas de administración
+import { AdminIndex } from '../Paginas/AdminIndex';
+import { AgregarLibro } from '../Paginas/AgregarLibro';
+import { EditarLibro } from '../Paginas/EditarLibro';
+import { GestionarPrestamos } from '../Paginas/GestionPrestamos';
+
 
 export const Rutas = () => {
   return (
@@ -22,6 +28,11 @@ export const Rutas = () => {
         <Route path='/Historial' element={<Historial />} />
         <Route path='/LoginAlum' element={<LoginAlum />} />
         <Route path='/LoginAdmin' element={<LoginAdmin />} />
+        {/* Rutas de administración */}
+        <Route path='/AdminIndex' element={<AdminIndex />} />
+        <Route path='/AgregarLibro' element={<AgregarLibro />} />
+        <Route path='/EditarLibro' element={<EditarLibro />} />
+        <Route path='/GestionarPrestamos' element={<GestionarPrestamos />} />
       </Routes>
     </div>
   );
